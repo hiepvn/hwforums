@@ -38,9 +38,10 @@ sub showTopic{
 	my ($c, $topic, $page ) = @_;
 	my $rs = $c->model('DB::Thread')->search(
 		{topic => $topic},
+		{order_by =>['datecreate']},
 		{
 			page => 1,  	# page to return (defaults to 1)
-			rows => 3, 	# number of results per page
+			rows => 10, 	# number of results per page
 		},
 	);
 	

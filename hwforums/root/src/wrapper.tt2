@@ -65,7 +65,10 @@
 	<div class="vide"></div>
 </div>
  
-<div id="footer">Copyright (c) your name goes here</div>
+<div id="footer">
+	<br>
+	hwforums
+</div>
 </div><!-- end outer -->
  
 </body>

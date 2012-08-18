@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 18, 2012 at 07:22 PM
+-- Generation Time: Aug 18, 2012 at 11:17 PM
 -- Server version: 5.5.25a
 -- PHP Version: 5.3.15
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `POST` (
   `title` text NOT NULL,
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
 
 --
 -- Dumping data for table `POST`
@@ -67,19 +67,8 @@ INSERT INTO `POST` (`id`, `thread`, `owner`, `datecreate`, `title`, `content`) V
 (2, 1, 1, '2012-08-11 00:00:00', 'post 2222222222222', 'post 2222222222222post 2222222222222post 2222222222222post 2222222222222post 2222222222222post 2222222222222post 2222222222222'),
 (3, 1, 2, '2012-08-09 02:09:00', 'tttttttttttttttt', 'tvgrefdsfds fds fs fds stvgrefdsfds fds fs fds s\r\ntvgrefdsfds fds fs fds stvgrefdsfds fds fs fds stvgrefdsfds fds fs fds stvgrefdsfds fds fs fds stvgrefdsfds fds fs fds stvgrefdsfds fds fs fds stvgrefdsfds fds fs fds stvgrefdsfds fds fs fds s'),
 (4, 10, 1, '2012-08-18 11:49:01', 'com ca loc binh dan de eeeeee', ' asd as da dsa d'),
-(5, 11, 3, '2012-08-18 12:47:30', '', ' '),
 (6, 2, 3, '2012-08-18 13:11:54', 'asdasd', ' ad'),
 (7, 2, 3, '2012-08-18 13:12:06', 'ddddddddddddddddd', ' dddddddddddsa dsa das                   dsad'),
-(8, 2, 3, '2012-08-18 13:13:04', '', ' '),
-(9, 2, 3, '2012-08-18 13:13:09', '', ' '),
-(10, 2, 3, '2012-08-18 13:14:22', '', ' '),
-(11, 2, 3, '2012-08-18 13:14:27', '', ' '),
-(12, 2, 3, '2012-08-18 13:15:12', '', ' '),
-(13, 2, 3, '2012-08-18 13:16:40', '', ' '),
-(14, 4, 3, '2012-08-18 13:16:58', '', ' '),
-(15, 4, 3, '2012-08-18 13:17:11', '', ' '),
-(16, 4, 3, '2012-08-18 13:17:17', '', ' '),
-(17, 4, 3, '2012-08-18 13:17:26', '', ' '),
 (18, 4, 3, '2012-08-18 13:19:00', 'sdf', ' sdf'),
 (19, 1, 3, '2012-08-18 15:24:43', 'im guest', 'guestsa das da '),
 (20, 1, 3, '2012-08-18 15:25:13', 'fgh gf', ' hgf '),
@@ -88,7 +77,26 @@ INSERT INTO `POST` (`id`, `thread`, `owner`, `datecreate`, `title`, `content`) V
 (23, 13, 3, '2012-08-18 16:17:36', 'df sdf sdfg ', ' sdfg '),
 (24, 14, 3, '2012-08-18 16:18:06', '11 edsf ', ' sdf '),
 (25, 15, 3, '2012-08-18 16:18:11', '12 ds ', ' df '),
-(26, 3, 3, '2012-08-18 18:06:26', 'df sdf sdfgsdf', ' sdf');
+(26, 3, 3, '2012-08-18 18:06:26', 'df sdf sdfgsdf', ' sdf'),
+(27, 16, 3, '2012-08-18 19:29:45', 'fgdhgfdh', ' dfgh'),
+(28, 17, 3, '2012-08-18 19:31:06', 'sdffsdf', ' sdf'),
+(29, 18, 3, '2012-08-18 22:46:40', '13  this is tittle ', '13 content content content content content content \r\n13 content content content content content content \r\n13 content content content content content content \r\n13 content content content content content content '),
+(30, 19, 2, '2012-08-18 22:48:59', 'asd adsa dadf fd  14', ' asd'),
+(31, 20, 3, '2012-08-18 23:01:14', 'asd', ' asd'),
+(32, 21, 3, '2012-08-18 23:01:30', 'sdfd f4sf', ' sdf'),
+(33, 21, 3, '2012-08-18 23:01:44', 'dfgh', ' arg'),
+(34, 21, 3, '2012-08-18 23:03:22', 'sdfd f4sd', ' sdfsdf'),
+(35, 22, 2, '2012-08-18 23:08:42', 'daf', ' sdf'),
+(36, 23, 3, '2012-08-18 23:11:01', 'title', 'content  content content content content content '),
+(37, 23, 3, '2012-08-18 23:11:44', 'title reply ', ' content reply content reply content reply content reply'),
+(38, 23, 3, '2012-08-18 23:12:10', 'hiepav reply', 'content '),
+(39, 24, 2, '2012-08-18 23:12:37', 'hiepav thread', 'content '),
+(40, 25, 3, '2012-08-18 23:14:34', 'new thread', 'content  content content content '),
+(41, 25, 3, '2012-08-18 23:14:55', 'this is reply', 'content reply  content reply content reply content reply '),
+(42, 25, 2, '2012-08-18 23:15:17', 'hiepav reply', 'hiepav content  '),
+(43, 26, 2, '2012-08-18 23:15:34', 'hiepav thread', 'content '),
+(44, 26, 15, '2012-08-18 23:16:52', 'hung reply', 'content '),
+(45, 26, 3, '2012-08-18 23:17:11', 'im guest', 'GUEST REPLY ');
 
 -- --------------------------------------------------------
 
@@ -103,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `THREAD` (
   `datecreate` datetime NOT NULL,
   `topic` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `THREAD`
@@ -123,7 +131,18 @@ INSERT INTO `THREAD` (`id`, `title`, `owner`, `datecreate`, `topic`) VALUES
 (12, '10sd ds fsdf ', 3, '2012-08-18 16:17:29', 1),
 (13, 'df sdf sdfg ', 3, '2012-08-18 16:17:36', 1),
 (14, '11 edsf ', 3, '2012-08-18 16:18:06', 1),
-(15, '12 ds ', 3, '2012-08-18 16:18:10', 1);
+(15, '12 ds ', 3, '2012-08-18 16:18:10', 1),
+(16, 'fgdhgfdh', 3, '2012-08-18 19:29:45', 2),
+(17, 'sdffsdf', 3, '2012-08-18 19:31:05', 2),
+(18, '13  this is tittle ', 3, '2012-08-18 22:46:40', 1),
+(19, 'asd adsa dadf fd  14', 2, '2012-08-18 22:48:59', 1),
+(20, 'asd', 3, '2012-08-18 23:01:14', 2),
+(21, 'sdfd f4sf', 3, '2012-08-18 23:01:30', 2),
+(22, 'daf', 2, '2012-08-18 23:08:42', 4),
+(23, 'title', 3, '2012-08-18 23:11:00', 3),
+(24, 'hiepav thread', 2, '2012-08-18 23:12:37', 3),
+(25, 'new thread', 3, '2012-08-18 23:14:33', 3),
+(26, 'hiepav thread', 2, '2012-08-18 23:15:34', 4);
 
 -- --------------------------------------------------------
 
@@ -167,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `USER` (
   `usergroup` int(11) NOT NULL,
   `active` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `USER`
@@ -178,7 +197,8 @@ INSERT INTO `USER` (`id`, `username`, `password`, `fullname`, `joindate`, `userg
 (2, 'hiepav', '123', 'Vo Nguyen Hiep', '2012-07-31 17:00:00', 0, 0),
 (3, 'Guest', '', 'Guest', '2012-07-31 17:00:00', 0, 0),
 (13, 'asd', 'asd', 'asd', '2012-08-12 07:13:35', 2, 0),
-(14, 'abc', 'abc', 'abc', '2012-08-12 07:17:47', 2, 0);
+(14, 'abc', 'abc', 'abc', '2012-08-12 07:17:47', 2, 0),
+(15, 'hung', '123', 'Vo Nguyen Hung', '2012-08-18 16:16:36', 2, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

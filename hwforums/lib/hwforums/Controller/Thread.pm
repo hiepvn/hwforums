@@ -77,7 +77,14 @@ sub do_newthread :Global{
 	
 	my $title = $c->request->params->{title};
         my $content = $c->request->params->{content};
-	my $owner = $c->session->{user}->{id} || 3;  # 3 = guest
+	my $owner;
+	if(defined $c->session->{user}){
+		$owner = $c->session->{user}->id;  # 3 = guest}
+	}
+	else{
+		$owner = 3;
+	}
+	
 	my $parenttopic = $c->request->params->{parenttopic};
 	
 	my $row = $c->model('DB::Thread')->new({});
