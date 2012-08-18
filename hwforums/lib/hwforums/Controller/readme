@@ -1,0 +1,21 @@
+my $user = $c->model('DB::User')->find({username=> $usr});
+	
+	if(defined $user){
+		$c->stash(user=>$user);
+		$c->stash(pwd=>$user->{password});
+		$c->stash(pwr=>$pw);
+	}
+	else{
+		$c->stash(user=>"xxx");
+		$c->stash(pwd=>"xxx");
+		$c->stash(pwr=>"xxx");
+	}
+	if($user->{password} == $pw){
+		 #$c->res->redirect($c->uri_for('/'));
+	 }
+	 
+	 
+DBIx::
+Catalyst::Plugin::Session	 
+Catalyst::Plugin::Session::Store::File
+Catalyst::Plugin::Session::Store::Cookie

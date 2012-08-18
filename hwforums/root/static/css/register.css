@@ -1,0 +1,28 @@
+﻿#content
+{
+	width:580px;
+	margin:auto;	
+}
+
+.rbox
+{
+	text-align:center;
+	padding: 20px;
+	border: 1px solid #999;
+	border-radius: 10px;
+	width: 230px;
+}
+
+.rbox-left
+{
+	float: left;
+}
+
+.rbox-right {
+	float: right;
+}
+
+.label
+{
+	margin: 0;
+}

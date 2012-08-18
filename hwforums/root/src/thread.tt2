@@ -1,0 +1,46 @@
+[%- # Provide a title -%]
+[% META title = 'Hwforums - View thread' -%]
+
+ 
+[% # Note That the '-' at the beginning or end of TT code  -%]
+[% # "chomps" the whitespace/newline at that end of the    -%]
+[% # output (use View Source in browser to see the effect) -%]
+ 
+[% # Some basic HTML with a loop to display books -%]
+
+[% thread.title %]<br>
+[% thread.datecreate %]<br>
+
+
+<input type="submit" class="button" value="Reply"  onclick="show('frmNewPost'); setfocus('posttitle');"/>
+
+[% FOREACH post IN posts -%]
+<table class="tbthread" border="0">
+	<thead>
+		<tr>
+			<td class="title">[% post.title %]</td>		
+			<td class="user">[%owners.item("$post.owner").fullname%]</td>
+			<td class="date">[% post.datecreate %]</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="3" >[% post.content %]</td>
+		</tr>
+	</tbody>	
+	
+	<br>
+</table>
+[% END -%]
+<input type="submit" class="button" value="Reply"  onclick="show('frmNewPost'); setfocus('posttitle');"/>
+
+<form method="post" action="newpost" id="frmNewPost"  style="display:none;">
+	<input type="text" value=[%thread.id%] name="threadid" style="display:none;"/><br>
+	<lable>title: </lable><br>
+	<input name="title" id="posttitle" class="input" type="text" style="width:650px"/><br>
+	<lable>Content: </lable><br>
+	<textarea name="content"  rows="10" cols="90"> </textarea><br>
+	
+	<input type="submit" class="button" value="Post" name="action"/>
+	<input type="submit" class="button" value="Cancel" name="action" onclick="javascript:hide('frmNewPost')"/>
+</form>

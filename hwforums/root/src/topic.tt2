@@ -1,0 +1,36 @@
+[%- # Provide a title -%]
+[% META title = 'Hwforums - View topic' -%]
+ 
+[% # Note That the '-' at the beginning or end of TT code  -%]
+[% # "chomps" the whitespace/newline at that end of the    -%]
+[% # output (use View Source in browser to see the effect) -%]
+ 
+ <form method="post" action="newthread">
+	<input type="text" value=[%parenttopic%] name="parenttopic" style="display:none;"/>
+	<input type="submit" class="button" value="New Thread"/>
+ </form>
+ 
+[% # Some basic HTML with a loop to display books -%]
+<table class="tbstyle" summary="Table content">
+    <thead>
+    	<tr>
+		<th class="icon"></th>
+		<th class="title">Topic</th>
+		<th class="lastpost">LastPost</th>
+		<th class="thread">Thread</th>
+		<th class="post">Post</th>
+        </tr>
+    </thead>
+    <tbody>
+		[% FOREACH thread IN threads -%]
+			<tr>
+				<td class="icon"></td>
+				<td class="title"><a href="thread?id=[%thread.id%]">[% thread.title %]</a></td> 
+				<td class="lastpost"></td>
+				<td class="thread"></td>
+				<td class="post"></td>
+			</tr>
+		[% END%]
+		<tr><td colspan="5" style="text-align:center;">[%pages%]<td></tr>
+    </tbody>
+</table>

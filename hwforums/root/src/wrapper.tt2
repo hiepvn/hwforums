@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" [%#
+    %]"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>[% template.title or "My Catalyst App!" %]</title>
+<link rel="stylesheet" href="[% c.uri_for('/static/css/main.css') %]" />
+<link rel="stylesheet" href="[% c.uri_for('/static/css/style-table.css') %]" />
+<link rel="stylesheet" href="[% c.uri_for('/static/css/thread.css') %]" />
+<link rel="stylesheet" href="[% c.uri_for('/static/css/register.css') %]" />
+<script src="[% c.uri_for('/javascripts/script.js') %]" type="text/javascript"></script>
+
+</head>
+ 
+<body>
+<div id="outer">
+<div id="header">
+<br><br>
+	[% template.title or site.title %]
+	<br>
+	<div class="left">
+	<br>
+	<a href="/">hwforums</a>
+	</div>
+	<div id="login">
+		[% IF c.session.user.username %]
+			<br>
+			Hello [% c.session.user.username %]!
+			<a href="[% c.uri_for('/logout') %]"> Logout</a>
+		[% ELSE %]
+			<form method="post" action="[% c.uri_for('/login') %]">
+				<table>
+					<tr> 
+						<td><label>Username:</label></td>
+						<td><label>Password:</label></td>
+						<td><label style="text-align:right"><a href="[% c.uri_for('/register') %]">Register</a></label></td>
+					</tr>
+					<tr> 
+						<td><input type="text" name="username" class="input" style="width:130px"/></td>
+						<td><input type="password" name="password" class="input"  style="width:130px"/></td>
+						<td><input type="submit" name="submit" value="Login" class="button" /><td>
+					</tr>
+				</table>
+			</form>
+		[% END %]
+		[%#
+		       Note that this whole block is a comment because the "#" appears
+		       immediate after the "[%" (with no spaces in between).  Although it
+		       can be a handy way to temporarily "comment out" a whole block of
+		       TT code, it's probably a little too subtle for use in "normal"
+		       comments.
+		%]
+	</div>
+	<div class="vide"></div>
+
+</div>
+<!-- Login form --><div id="mainbody">
+<!--     [%# Status and error messages %]
+    <span class="message">[% status_msg %]</span>
+    <span class="error">[% error_msg %]</span>
+    [%# This is where TT will stick all of your template's contents. -%]
+-->    
+    <br>[% content %]<br>
+    
+	<div class="vide"></div>
+</div>
+ 
+<div id="footer">Copyright (c) your name goes here</div>
+</div><!-- end outer -->
+ 
+</body>
+</html>

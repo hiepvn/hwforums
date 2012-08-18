@@ -1,0 +1,44 @@
+[% # This is a TT comment. -%]
+ 
+[%- # Provide a title -%]
+[% META title = 'Login' -%]
+
+<div id="content">
+        <div class="rbox rbox-left">
+            Login now<br><br>
+		<form method="post" action="[% c.uri_for('/login') %]">
+			<table style="margin:auto;text-align: left;">
+				<tr><td><label>Username:</label></td></tr>
+				<tr><td><input type="text" name="username" class="input"/></td></tr>
+				<tr><td><label>Password:</label></td></tr>
+				<tr><td><input type="password" name="password" class="input"/><br></td></tr>
+			</table>	
+			<input type="submit" name="submit" class="button"  value="Login"/>
+		</form>
+        </div>
+        
+        <div class="rbox rbox-right">
+		Register a new account:<br><br>
+		
+		<div class="message">[% status_msg.id %]</div>
+		<div class="message">[% status_msg %]</div>
+		<div class="error">[% error_msg %]</div>
+    
+		<form method="post" action="[% c.uri_for('/do_register') %]">
+			<table style="text-align: left;">
+				<tr><td>Tên đăng nhập: *</td></tr>
+				<tr><td><input type="text"  name="txtUsername" class="input"/></td></tr>
+				<tr><td>Mật khẩu: *</td></tr>
+				<tr><td><input type="password"   name="txtPassword"  class="input" /></td></tr>
+				<tr><td>Xác nhận mật khẩu: *</td></tr>
+				<tr><td><input type="password"  name="txtConfirmPassword"  class="input" /></td></tr>  
+				<tr><td>Họ tên :</td></tr>
+				<tr><td><input type="text"  name="txtFullname"  class="input"/></td></tr> 
+				<tr><td>Email :</td></tr>
+				<tr><td><input type="text"  name="txtEmail"  class="input"/></td></tr> 
+			</table>	
+			<input  type="submit" name="submit"  class="button"  value="Register" />	
+            </form>        
+        </div> 
+    </div>
+    

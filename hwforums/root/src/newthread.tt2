@@ -1,0 +1,23 @@
+[%- # Provide a title -%]
+[% META title = 'Hwforums - New thread' -%]
+ 
+[% # Note That the '-' at the beginning or end of TT code  -%]
+[% # "chomps" the whitespace/newline at that end of the    -%]
+[% # output (use View Source in browser to see the effect) -%]
+ 
+
+ <form method="post" action="do_newthread">
+	<input type="text" value=[%parenttopic%] name="parenttopic" style="display:none;"/>
+	<input type="submit" class="button" value="Post" name="post"/>
+	<input type="submit" class="button" value="Cancle"  name="cancle"/>
+ 
+	<br>
+	<lable>title: </lable><br>
+	<input name="title" class="input" type="text" style="width:650px"/><br>
+	<lable>Content: </lable><br>
+	<textarea name="content"  rows="10" cols="90"> </textarea><br>
+	
+	<input type="submit" class="button" value="Post" name="action"/>
+	<input type="submit" class="button" value="Cancel" name="action"/> 
+</form>
+

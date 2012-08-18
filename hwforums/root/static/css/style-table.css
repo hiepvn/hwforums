@@ -1,0 +1,46 @@
+   
+.tbstyle
+{
+	font-size: 14px;
+	background: #eee;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+.tbstyle th
+{
+    text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 10px;
+	border-bottom: 2px solid #6678b1;
+	color: #444;
+}
+.tbstyle td
+{
+	border-bottom: 1px solid #ccc;
+	padding: 6px 10px;
+}
+.tbstyle tbody tr:hover td
+{
+	color: #bbb;
+}
+
+.tbstyle .icon{
+	text-align: right;
+	padding:0;
+	width:5%;
+}
+.tbstyle .title{
+    text-align: left;
+	width:50%;
+}
+.tbstyle .lastpost{
+	width:20%;
+}
+.tbstyle  .thread{
+	width:10%;
+}
+.tbstyle  .post{
+	width:10%;
+}

@@ -1,0 +1,10 @@
+[%- # Provide a title -%]
+[% META title = 'Hwforums - Do new thread' -%]
+ 
+[% # Note That the '-' at the beginning or end of TT code  -%]
+[% # "chomps" the whitespace/newline at that end of the    -%]
+[% # output (use View Source in browser to see the effect) -%]
+ 
+
+[%max%]
+
